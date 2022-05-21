@@ -1,16 +1,25 @@
 <!-- Inicializacion de seguimiento de una carpeta por parte de git -->
 git init 
 
+<!-- Crea un proyecto con un nombre espesificado -->
+git init [aca va el nombre]
+
 <!-- Agregar archivos de la carpeta al area de ensayo local. Se debe utilizar siempre antes de hacer un commit, por ejemplo tambien cuando un archivo
 del area de ensayo local sufre modificaciones -->
 git add (aqui va el nombre del archivo)
 <!-- Agrega al area de ensayo todos los archivos de la carpeta -->
 git add .
 
+<!-- Muestra las diferencias del archivo entre el área de espera y la última versión del archivo -->
+$ git diff --staged
+
 <!-- Guarda los archivos que se encontravan en el area de ensayo local en el repositorio local -->
 git commit
 <!-- Agrega una descripcion entre las comillas -->
 git commit -m "" 
+
+Mueve el archivo del área de espera, pero preserva su contenido
+$ git reset [file]
 
 <!-- Muestra el estado de los archivos de la carpeta que no se les esta haciendo seguimiento o no se le guardaron cambios -->
 git status -s
@@ -45,6 +54,12 @@ git branch (aqui va el nombre de la rama)
 <!-- Muestra las ramas disponibles (muestra con un asterisco y en verde la rama que se esta utilizando)-->
 git branch
 
+<!-- Se crea una rama y se selecciona para empezar a trabajar -->
+git checkout -b "[aqui va el nombre de la rama]"
+
+<!-- Se hace un comit y se envia la rama al repositorio remoto  -->
+git push origin [nombre de la rama modificada]
+
 <!-- Se selecciona una de las ramas disponibles para trabajar -->
 git checkout (aqui va el nombre de la rama)
 
@@ -53,5 +68,8 @@ git merge (aqui va el nombre de la rama)
 
 <!-- Elimina una rama en espesifico -->
 git branch -d (aqui va el nombre de la rama)
+
+<!-- Desecha todo el historial y regresa al commit especificado -->
+$ git reset --hard [commit]
 
 <!-- Estos codigos se pueden introducir desde gitbash como desde el terminal de vsc -->
